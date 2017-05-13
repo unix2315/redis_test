@@ -3,7 +3,7 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'chatserver.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'redis_pr.settings')
 
 from django.core.wsgi import get_wsgi_application
 from django.conf import settings
