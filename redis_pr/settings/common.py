@@ -1,7 +1,8 @@
 # Django settings for unit test project.
 import os
 
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+PROJECT_DIR = os.path.dirname(os.path.dirname(__file__))
+BASE_DIR = os.path.dirname(PROJECT_DIR)
 
 DEBUG = True
 
@@ -33,7 +34,7 @@ MEDIA_URL = ''
 
 # Absolute path to the directory that holds static files.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = os.environ.get('DJANGO_STATIC_ROOT', '')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # URL that handles the static files served from STATIC_ROOT.
 # Example: "http://media.lawrence.com/static/"
@@ -60,7 +61,7 @@ TEMPLATE_LOADERS = (
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Europe/Berlin'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
